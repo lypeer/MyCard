@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/card"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.example.yang.mycard.MyLearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/since"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:textColor="@color/word_main"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SINCE"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_main"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:text="0"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_main"
+        android:layout_gravity="center"
+        android:text="DAYS"
+        android:id="@+id/da"
+        android:textSize="20sp" />
+</com.example.yang.mycard.MyLearLayout>
+</LinearLayout>

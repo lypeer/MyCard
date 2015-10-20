@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/title2" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/actionbar">
+
+        <LinearLayout
+            android:id="@+id/body_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/change_thing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="70dp"
+                android:background="@null"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:text="@string/since_i"
+                android:textColor="@android:color/background_light"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/change_haomany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="@string/o"
+                android:textColor="@android:color/background_light"
+                android:textSize="80sp" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/days"
+                android:textColor="@android:color/background_light"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calendar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/calendar_title"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/shang"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shang" />
+
+                <Button
+                    android:id="@+id/xia"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/xia" />
+
+                <TextView
+                    android:id="@+id/mon_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/test1"
+                    android:textColor="@color/white"
+                    android:textSize="27sp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="horizontal"
+                android:id="@+id/xinqi"
+                android:visibility="gone"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/ri"
+                    android:id="@+id/ri"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/yi"
+                    android:id="@+id/yi"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/er"
+                    android:textSize="20dp"
+                    android:id="@+id/er"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:id="@+id/san"
+                    android:text="@string/san"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:id="@+id/si"
+                    android:text="@string/si"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/wu"
+                    android:text="@string/wu"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/liu"
+                    android:text="@string/liu"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+            <GridView
+                android:id="@+id/calendar_gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="7"
+                android:verticalSpacing="5dp"
+                android:visibility="gone">
+
+            </GridView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/card"
+            android:text="@string/del"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_above="@+id/del"
+            android:background="@drawable/menu" />
+
+
+
+        <LinearLayout
+            android:id="@+id/menu_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/menu"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/change"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/card"
+                android:text="@string/change" />
+
+            <Button
+                android:id="@+id/calendar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/card"
+                android:text="@string/calendar" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/change_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/cancel_change"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/card"
+                android:text="@string/cancel"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/sureto"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/card"
+                android:text="@string/save"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/choose"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lin"
+            android:background="@color/card"
+            android:text="@string/select"
+            android:textColor="@android:color/background_dark" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/calendar_back"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/card"
+            android:text="@string/back"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
